@@ -6,7 +6,7 @@ import time
 class LightupScraper:
 
     results = []
-    results_pc = []
+    #results_pc = []
 
     def fetch(self, url):
         print(f'HTTP GET request to URL: {url}', end='')
@@ -43,15 +43,18 @@ class LightupScraper:
         lumens = [''.join([lumen.text for lumen in detail if 'Lumens:' in lumen.text]).split(':')[-1].strip() for detail in details]
         warrantys = [''.join([warranty.text for warranty in detail if 'Warranty:' in warranty.text]).split(':')[-1].strip() for detail in details]
         wattages = [''.join([wattage.text for wattage in detail if 'Wattage:' in wattage.text]).split(':')[-1].strip() for detail in details]
-        features = [feature.text.split() for feature in content.find_all('span', {'class': 'ols-card-text__list--features'})]
-        prices = [price.text for price in content.find_all('span', {'class': 'price price--withoutTax'})]
-        prices_pc = [price_pc.text for price_pc in content.find_all('div', {'class': 'price-per--case'})]
-        #print(prices)
+        #features = [feature.text.split() for feature in content.find_all('span', {'class': 'ols-card-text__list--features'})]
+        def check_class(tag):
+        
+            if tag.name == 'span' and 'class' in tag.attrs:
+                return 'price--withoutTax' in tag.attrs['class']
+            elif tag.name == 'div' and 'class' in tag.attrs:
+                return 'price-per--case' in tag.attrs['class']
+            else:
+                return False
+        prices = [price_pc.text for price_pc in content.find_all(check_class)]
 
 
-
-        for feature in features:
-            feat = feature
 
         for index in range(0, len(prices)):
             # Append scraped item to results list
@@ -66,32 +69,12 @@ class LightupScraper:
                 'Lumens': lumens[index],
                 'Brand': brand[index],
                 'Warranty': warrantys[index],
-                'Features': feat[index],
                 'Price': prices[index]
             })
 
-            for index in range(0, len(prices_pc)):
-                # Append scraped item to results list
-                self.results_pc.append({
-                    'Title': titles[index],
-                    'Link': links[index],
-                    'MPN': mpn[index],
-                    'SKU': skus[index],
-                    'Base': base[index],
-                    'Wattage': wattages[index],
-                    'Life Hours': life_hours[index],
-                    'Lumens': lumens[index],
-                    'Brand': brand[index],
-                    'Warranty': warrantys[index],
-                    'Features': feat[index],
-                    'Price': prices[index]
-                })
-
     def to_csv(self):
-
-        final_output = self.results + self.results_pc
         with open('lightup.csv', 'w', newline='') as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=final_output[0].keys())
+            writer = csv.DictWriter(csv_file, fieldnames=self.results[0].keys())
             writer.writeheader()
 
             for row in self.results:
