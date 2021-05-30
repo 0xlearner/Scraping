@@ -96,8 +96,8 @@ class MovieScraper:
             self.parse(response.text)
             time.sleep(2)
         #response = self.fetch(self.base_url)
-        html = self.from_html()
-        self.parse(html)
+        # html = self.from_html()
+        # self.parse(html)
 
 if __name__ == '__main__':
     scraper = MovieScraper()
