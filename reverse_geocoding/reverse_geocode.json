@@ -1,0 +1,46 @@
+[
+  {
+    "given_lat": "\"51.4624087\"",
+    "given_lon": "\"0.1079432\"",
+    "Name": "\"Upper Wickham Lane\"",
+    "Road": "\"Upper Wickham Lane\"",
+    "State_District": "\"Greater London\"",
+    "State": "\"England\"",
+    "Postcode": "\"DA16 1TN\"",
+    "Country": "\"United Kingdom\"",
+    "Country_Code": "\"gb\""
+  },
+  {
+    "given_lat": "\"51.4437722\"",
+    "given_lon": "\"0.15143535426414392\"",
+    "Name": "\"Victoria Homes\"",
+    "Road": "\"Bourne Road\"",
+    "State_District": "\"Greater London\"",
+    "State": "\"England\"",
+    "Postcode": "\"DA5 1LW\"",
+    "Country": "\"United Kingdom\"",
+    "Country_Code": "\"gb\""
+  },
+  {
+    "given_lat": "\"51.517568749999995\"",
+    "given_lon": "\"-0.1411598575972799\"",
+    "Name": "\"Glamorous\"",
+    "Road": "\"Mortimer Street\"",
+    "State_District": "\"Greater London\"",
+    "State": "\"England\"",
+    "Postcode": "\"W1\"",
+    "Country": "\"United Kingdom\"",
+    "Country_Code": "\"gb\""
+  },
+  {
+    "given_lat": "\"51.540082299999995\"",
+    "given_lon": "\"-0.00149577689848307\"",
+    "Name": "\"Unex Tower\"",
+    "Road": "\"Station Street\"",
+    "State_District": "\"Greater London\"",
+    "State": "\"England\"",
+    "Postcode": "\"E15 1DA\"",
+    "Country": "\"United Kingdom\"",
+    "Country_Code": "\"gb\""
+  }
+]

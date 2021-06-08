@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "\"Welling High Street\"",
+    "Address": "\"Welling High Street, Welling, London Borough of Bexley, London, Greater London, England, DA16 1TN, United Kingdom\"",
+    "Longitude": "0.1078295",
+    "Latitude": "51.462495"
+  },
+  {
+    "Name": "\"Bourne Road\"",
+    "Address": "\"Bourne Road, Bexley, London Borough of Bexley, London, Greater London, England, DA5 1LW, United Kingdom\"",
+    "Longitude": "0.1516269",
+    "Latitude": "51.4437673"
+  },
+  {
+    "Name": null,
+    "Address": "\"180, London Road, New Headington, Headington, Oxford, Oxfordshire, South East England, England, OX3 8AH, United Kingdom\"",
+    "Longitude": "-1.2072702115526601",
+    "Latitude": "51.76099495"
+  },
+  {
+    "Name": "\"Unex Tower\"",
+    "Address": "\"Unex Tower, 7, Station Street, Stratford Marsh, London Borough of Newham, London, Greater London, England, E15 1DA, United Kingdom\"",
+    "Longitude": "-0.00149577689848307",
+    "Latitude": "51.540082299999995"
+  }
+]
